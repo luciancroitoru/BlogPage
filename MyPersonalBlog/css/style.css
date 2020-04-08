@@ -1,0 +1,54 @@
+/* Mobile */
+.container{
+    display:grid;
+    grid-template-columns:1fr;
+    grid-template-rows:50px 700px 25px;
+    border:2px solid greenyellow;
+      /* Use grid-template-area to create a mobile layout where each named space occupies its own row */
+    grid-template-areas:
+    "hd"
+    "sd"
+    "main"
+    "ft";
+    }
+  .box{
+      border:1px solid green;
+      background: #FCF3CF;
+      }
+  
+    .header{
+      grid-area:hd;
+    }
+    .footer{
+      grid-area:ft;  
+      padding:5px;
+    }
+    .sidebar{
+      grid-area:sd;
+      padding:5px;
+    }
+    .content{
+      grid-area:main;
+      padding:5px;
+      display:flex;
+      flex-direction:column;
+    }
+    #image{
+      width:100%;
+      background-size:contain;
+      align-content: center;
+    }
+  
+  /* If Screen Is Wide Enough */
+  @media(min-width:900px){
+  .container{
+        display:grid;
+        grid-template-columns:300px 300px 300px;
+        grid-template-rows:25px 700px 25px;
+        grid-template-areas: 
+        "hd hd hd hd hd hd"
+        "sd sd main main main main"
+        "ft ft ft ft ft ft";
+        border:2px solid greenyellow;
+    }
+  }
